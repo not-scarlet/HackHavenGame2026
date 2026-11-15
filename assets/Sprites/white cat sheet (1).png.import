@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brvo0vifgdjhe"
-path="res://.godot/imported/Black_Cat_animations.png-ce7ca492308e97ce3ba85050dfd12e14.ctex"
+uid="uid://blhd12rtwxa8o"
+path="res://.godot/imported/white cat sheet (1).png-c638e98649eb9f0d387ba44a5dc6cc6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Black_Cat_animations.png"
-dest_files=["res://.godot/imported/Black_Cat_animations.png-ce7ca492308e97ce3ba85050dfd12e14.ctex"]
+source_file="res://assets/Sprites/white cat sheet (1).png"
+dest_files=["res://.godot/imported/white cat sheet (1).png-c638e98649eb9f0d387ba44a5dc6cc6c.ctex"]
 
 [params]
 

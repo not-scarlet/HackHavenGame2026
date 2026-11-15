@@ -1,24 +1,43 @@
 [gd_scene format=3 uid="uid://cqx7mwxbm0vbo"]
 
 [ext_resource type="Script" uid="uid://c0il3yail46bc" path="res://scripts/Player.gd" id="1_kpjcp"]
-[ext_resource type="Texture2D" uid="uid://jqtcxkma1e55" path="res://icon.svg" id="2_kne1u"]
+[ext_resource type="Texture2D" uid="uid://l3lqww83la73" path="res://assets/Sprites/black cat sheet.png" id="2_kpjcp"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pxvb0"]
-radius = 6.0
-height = 12.0
+[sub_resource type="AtlasTexture" id="AtlasTexture_kne1u"]
+atlas = ExtResource("2_kpjcp")
+region = Rect2(0, 0, 256, 256)
 
-[sub_resource type="TileSet" id="TileSet_o3cl4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_e80uo"]
+atlas = ExtResource("2_kpjcp")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kne1u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kne1u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e80uo")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e80uo"]
+radius = 15.605126
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1149414764]
 scale = Vector2(5, 5)
 script = ExtResource("1_kpjcp")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=847874627]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_kne1u")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1788471921]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_kne1u")
+animation = &"idle"
+autoplay = "idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1135031083]
-shape = SubResource("CapsuleShape2D_pxvb0")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=425863142]
-tile_set = SubResource("TileSet_o3cl4")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=906100173]
+position = Vector2(7.7999997, 5.400002)
+shape = SubResource("CircleShape2D_e80uo")
