@@ -4,12 +4,23 @@
 [ext_resource type="PackedScene" uid="uid://cqx7mwxbm0vbo" path="res://Player.tscn" id="2_jsrw5"]
 [ext_resource type="Texture2D" uid="uid://blhd12rtwxa8o" path="res://assets/Sprites/white cat sheet (1).png" id="3_jsrw5"]
 [ext_resource type="Texture2D" uid="uid://l3lqww83la73" path="res://assets/Sprites/black cat sheet.png" id="4_jsrw5"]
+[ext_resource type="Texture2D" uid="uid://cpi5gawq46vke" path="res://assets/Sprites/the most basic tileset EVER (3).png" id="5_ykko5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pxvb0"]
 size = Vector2(125, 120)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yxyfn"]
+texture = ExtResource("5_ykko5")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
 [sub_resource type="TileSet" id="TileSet_k3env"]
 tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_yxyfn")
 
 [node name="Node2D" type="Node2D" unique_id=258943500]
 
@@ -36,5 +47,7 @@ sprite_cat = ExtResource("4_jsrw5")
 zoom = Vector2(0.5, 0.5)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=675677966]
+scale = Vector2(6, 6)
 tile_set = SubResource("TileSet_k3env")
 format = 2
+layer_0/tile_data = PackedInt32Array(131072, 1, 0, 196607, 1, 0, 196606, 1, 0, 196605, 1, 0, 131067, 1, 0, 196603, 1, 1, 196604, 1, 1, 131068, 1, 0)
