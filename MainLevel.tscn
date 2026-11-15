@@ -6,10 +6,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pxvb0"]
 size = Vector2(125, 120)
 
+[sub_resource type="TileSet" id="TileSet_pxvb0"]
+physics_layer_0/collision_layer = 1
+
 [node name="Node2D" type="Node2D" unique_id=258943500]
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=206064062]
-position = Vector2(574, 613)
+position = Vector2(574, 700)
 scale = Vector2(9.5, 0.5)
 texture = ExtResource("1_jq6gy")
 
@@ -24,3 +27,6 @@ position = Vector2(731, 414)
 [node name="CharacterBody2D2" parent="." unique_id=1257627712 instance=ExtResource("2_o3cl4")]
 position = Vector2(529, 535)
 player_enabled = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=392509565]
+tile_set = SubResource("TileSet_pxvb0")
