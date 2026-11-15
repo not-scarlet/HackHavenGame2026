@@ -11,6 +11,26 @@ region = Rect2(0, 0, 256, 256)
 atlas = ExtResource("2_kpjcp")
 region = Rect2(256, 0, 256, 256)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpjcp"]
+atlas = ExtResource("2_kpjcp")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdg3f"]
+atlas = ExtResource("2_kpjcp")
+region = Rect2(256, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtqjt"]
+atlas = ExtResource("2_kpjcp")
+region = Rect2(512, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ncpa"]
+atlas = ExtResource("2_kpjcp")
+region = Rect2(768, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxr5p"]
+atlas = ExtResource("2_kpjcp")
+region = Rect2(0, 256, 256, 256)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_kne1u"]
 animations = [{
 "frames": [{
@@ -23,6 +43,31 @@ animations = [{
 "loop": 1,
 "name": &"idle",
 "speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpjcp")
+}],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tdg3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtqjt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ncpa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxr5p")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e80uo"]
@@ -35,8 +80,9 @@ script = ExtResource("1_kpjcp")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1788471921]
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_kne1u")
-animation = &"idle"
+animation = &"walk"
 autoplay = "idle"
+frame_progress = 0.8803277
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=906100173]
 position = Vector2(7.7999997, 5.400002)
